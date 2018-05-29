@@ -16,8 +16,8 @@
       <isModify>false</isModify>
     </fact-data>
     <execution-trace>
-      <executionTimeResult>13</executionTimeResult>
-      <numberOfRulesFired>1</numberOfRulesFired>
+      <executionTimeResult>15</executionTimeResult>
+      <numberOfRulesFired>2</numberOfRulesFired>
     </execution-trace>
     <expect-fact>
       <fieldValues>
@@ -26,6 +26,15 @@
           <expected>World</expected>
           <successResult>true</successResult>
           <explanation>[hw] field [secondStr] was [World].</explanation>
+          <operator>==</operator>
+          <nature>1</nature>
+        </expect-field>
+        <expect-field>
+          <fieldName>fullStr</fieldName>
+          <expected>Hello World</expected>
+          <actualResult>HelloWorld</actualResult>
+          <successResult>false</successResult>
+          <explanation>[hw] field [fullStr] was [HelloWorld] expected [Hello World].</explanation>
           <operator>==</operator>
           <nature>1</nature>
         </expect-field>
@@ -41,7 +50,7 @@
       <actualResult>1</actualResult>
     </expect-rule>
   </fixtures>
-  <lastRunResult>2018-05-29 09:12:10.452 UTC</lastRunResult>
+  <lastRunResult>2018-05-29 09:23:44.193 UTC</lastRunResult>
   <rules/>
   <inclusive>false</inclusive>
   <packageName>com.myteam.helloworld</packageName>
