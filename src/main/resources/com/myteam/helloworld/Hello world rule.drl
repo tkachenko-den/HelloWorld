@@ -11,3 +11,15 @@ then
     };
 end;
 
+rule "full string"
+no-loop
+when 
+    $hw: HelloWorldObject()
+then
+    String fs =  $hw.firstStr+$hw.secondStr;
+    modify($hw){ 
+        fullStr=fs;
+    };
+end;
+
+
