@@ -1,21 +1,28 @@
 package com.myteam.helloworld;
 dialect "mvel"
 
+
+// Это правило составляет полную строку из двух слов
+// Правило срабатывает когда меняются поля firstStr и secondStr (см. @watch)
 rule "full string"
 when 
+    // Этим паттерном отбираем все объекты с типом HelloWorldObject
     $hw: HelloWorldObject() @watch(firstStr,secondStr)
 then
+    // Командой modify мы инструктурием систему что нужно вызвать правила, зависящие от модифицируемых полей
     modify($hw){ 
         fullStr=$hw.firstStr+" "+$hw.secondStr;
     };
 end;
 
 
-
+// Это правило задаёт второе слово в зависимости от значения первого слова
 rule "second world"
 when 
+    // Этим паттерном отбираем все объекты с типом HelloWorldObject у которых поле firstStr=="Hello"
     $hw: HelloWorldObject(firstStr=="Hello") 
 then
+    // Командой modify мы инструктурием систему что нужно вызвать правила, зависящие от модифицируемых полей
     modify($hw){ 
         secondStr="World";
     };
