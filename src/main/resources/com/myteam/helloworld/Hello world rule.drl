@@ -16,9 +16,8 @@ no-loop
 when 
     $hw: HelloWorldObject()
 then
-    String fs =  $hw.firstStr+$hw.secondStr;
     modify($hw){ 
-        fullStr=fs;
+        fullStr=$hw.firstStr+$hw.secondStr;
     };
 end;
 
