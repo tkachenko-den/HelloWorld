@@ -1,2 +1,13 @@
 package com.myteam.helloworld;
+dialect "mvel"
+
+rule "second world"
+no-loop
+when 
+    $hw: HelloWorldObject(firstStr=="Hello")
+then
+    modify($hw){ 
+        secondStr="World"
+    };
+end;
 
