@@ -50,7 +50,7 @@
       <boundName>f1</boundName>
       <factField>originalLang</factField>
       <type>String</type>
-      <update>false</update>
+      <update>true</update>
     </set-field-col52>
     <set-field-col52>
       <typedDefaultValue>
@@ -64,7 +64,7 @@
       <boundName>f1</boundName>
       <factField>secondStr</factField>
       <type>String</type>
-      <update>false</update>
+      <update>true</update>
     </set-field-col52>
   </actionCols>
   <auditLog>
