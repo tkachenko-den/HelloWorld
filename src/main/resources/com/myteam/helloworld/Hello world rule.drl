@@ -16,7 +16,7 @@ when
     $hw: HelloWorldObject()
 then
     modify($hw){ 
-        fullStr=$hw.firstStr+$hw.secondStr;
+        fullStr=$hw.firstStr+" "+$hw.secondStr;
     };
 end;
 
