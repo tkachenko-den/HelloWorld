@@ -1,0 +1,102 @@
+<scenario>
+  <name>test.scenario</name>
+  <maxRuleFirings>100000</maxRuleFirings>
+  <globals/>
+  <fixtures>
+    <fact-data>
+      <type>HelloWorldObject</type>
+      <fieldData>
+        <field-data>
+          <name>firstStr</name>
+          <value>Hello</value>
+          <nature>4</nature>
+        </field-data>
+      </fieldData>
+      <name>hw</name>
+      <isModify>false</isModify>
+    </fact-data>
+    <fact-data>
+      <type>HelloWorldObject</type>
+      <fieldData>
+        <field-data>
+          <name>firstStr</name>
+          <value>Привет</value>
+          <nature>4</nature>
+        </field-data>
+      </fieldData>
+      <name>hw2</name>
+      <isModify>false</isModify>
+    </fact-data>
+    <fact-data>
+      <type>HelloWorldObjectWithLocale</type>
+      <fieldData>
+        <field-data>
+          <name>firstStr</name>
+          <value>Hola</value>
+          <nature>4</nature>
+        </field-data>
+      </fieldData>
+      <name>hw3</name>
+      <isModify>false</isModify>
+    </fact-data>
+    <execution-trace>
+      <executionTimeResult>10</executionTimeResult>
+      <numberOfRulesFired>6</numberOfRulesFired>
+    </execution-trace>
+    <expect-fact>
+      <fieldValues>
+        <expect-field>
+          <fieldName>fullStr</fieldName>
+          <expected>Hello World</expected>
+          <actualResult>Привет null</actualResult>
+          <successResult>true</successResult>
+          <explanation>[hw] field [fullStr] was [Hello World].</explanation>
+          <operator>==</operator>
+          <nature>1</nature>
+        </expect-field>
+      </fieldValues>
+      <name>hw</name>
+      <anonymous>false</anonymous>
+    </expect-fact>
+    <expect-fact>
+      <fieldValues>
+        <expect-field>
+          <fieldName>fullStr</fieldName>
+          <expected>Привет мир</expected>
+          <actualResult>Привет null</actualResult>
+          <successResult>false</successResult>
+          <explanation>[hw2] field [fullStr] was [Привет null] expected [Привет мир].</explanation>
+          <operator>==</operator>
+          <nature>1</nature>
+        </expect-field>
+      </fieldValues>
+      <name>hw2</name>
+      <anonymous>false</anonymous>
+    </expect-fact>
+    <expect-fact>
+      <fieldValues>
+        <expect-field>
+          <fieldName>fullStr</fieldName>
+          <expected>Hola Mundo</expected>
+          <actualResult>Hola null</actualResult>
+          <successResult>false</successResult>
+          <explanation>[hw3] field [fullStr] was [Hola null] expected [Hola Mundo].</explanation>
+          <operator>==</operator>
+          <nature>1</nature>
+        </expect-field>
+      </fieldValues>
+      <name>hw3</name>
+      <anonymous>false</anonymous>
+    </expect-fact>
+  </fixtures>
+  <lastRunResult>2018-05-29 10:49:01.147 UTC</lastRunResult>
+  <rules/>
+  <inclusive>true</inclusive>
+  <packageName>com.myteam.helloworld</packageName>
+  <imports>
+    <imports/>
+  </imports>
+  <ksessions>
+    <string>defaultKieSession</string>
+  </ksessions>
+</scenario>
