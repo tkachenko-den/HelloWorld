@@ -11,21 +11,10 @@ public class HelloWorldObjectWithLocale extends HelloWorldObject
 
 	static final long serialVersionUID = 1L;
 
-	@org.kie.api.definition.type.Label("Целевой язык")
-	private java.lang.String targetLang;
-
-	@org.kie.api.definition.type.Label(value = "\u042F\u0437\u044B\u043A \u043E\u0440\u0438\u0433\u0438\u043D\u0430\u043B\u0430")
+	@org.kie.api.definition.type.Label("Язык оригинала")
 	private java.lang.String originalLang;
 
 	public HelloWorldObjectWithLocale() {
-	}
-
-	public java.lang.String getTargetLang() {
-		return this.targetLang;
-	}
-
-	public void setTargetLang(java.lang.String targetLang) {
-		this.targetLang = targetLang;
 	}
 
 	public java.lang.String getOriginalLang() {
@@ -36,9 +25,7 @@ public class HelloWorldObjectWithLocale extends HelloWorldObject
 		this.originalLang = originalLang;
 	}
 
-	public HelloWorldObjectWithLocale(java.lang.String targetLang,
-			java.lang.String originalLang) {
-		this.targetLang = targetLang;
+	public HelloWorldObjectWithLocale(java.lang.String originalLang) {
 		this.originalLang = originalLang;
 	}
 
