@@ -16,7 +16,7 @@
       <isModify>false</isModify>
     </fact-data>
     <execution-trace>
-      <executionTimeResult>87</executionTimeResult>
+      <executionTimeResult>13</executionTimeResult>
       <numberOfRulesFired>1</numberOfRulesFired>
     </execution-trace>
     <expect-fact>
@@ -33,8 +33,15 @@
       <name>hw</name>
       <anonymous>false</anonymous>
     </expect-fact>
+    <expect-rule>
+      <ruleName>second world</ruleName>
+      <explanation>Rule [second world] was activated 1 times.</explanation>
+      <expectedFire>true</expectedFire>
+      <successResult>true</successResult>
+      <actualResult>1</actualResult>
+    </expect-rule>
   </fixtures>
-  <lastRunResult>2018-05-29 09:10:46.78 UTC</lastRunResult>
+  <lastRunResult>2018-05-29 09:12:10.452 UTC</lastRunResult>
   <rules/>
   <inclusive>false</inclusive>
   <packageName>com.myteam.helloworld</packageName>
