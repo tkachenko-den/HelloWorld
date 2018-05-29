@@ -1,6 +1,17 @@
 package com.myteam.helloworld;
 dialect "mvel"
 
+rule "full string"
+when 
+    $hw: HelloWorldObject()
+then
+    modify($hw){ 
+        fullStr=$hw.firstStr+" "+$hw.secondStr;
+    };
+end;
+
+
+
 rule "second world"
 when 
     $hw: HelloWorldObject(firstStr=="Hello")
@@ -10,13 +21,6 @@ then
     };
 end;
 
-rule "full string"
-when 
-    $hw: HelloWorldObject()
-then
-    modify($hw){ 
-        fullStr=$hw.firstStr+" "+$hw.secondStr;
-    };
-end;
+
 
 
