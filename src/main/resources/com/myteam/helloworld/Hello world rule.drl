@@ -12,7 +12,6 @@ then
 end;
 
 rule "full string"
-no-loop
 when 
     $hw: HelloWorldObject()
 then
