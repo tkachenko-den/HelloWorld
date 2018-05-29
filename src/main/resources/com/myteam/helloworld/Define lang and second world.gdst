@@ -23,7 +23,7 @@
             <isOtherwise>false</isOtherwise>
           </typedDefaultValue>
           <hideColumn>false</hideColumn>
-          <width>100</width>
+          <width>233</width>
           <header>Первое слово</header>
           <constraintValueType>1</constraintValueType>
           <factField>firstStr</factField>
