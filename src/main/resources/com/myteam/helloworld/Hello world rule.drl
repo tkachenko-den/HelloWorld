@@ -3,7 +3,7 @@ dialect "mvel"
 
 rule "full string"
 when 
-    $hw: HelloWorldObject()
+    $hw: HelloWorldObject() @watch(firstStr,secondStr)
 then
     modify($hw){ 
         fullStr=$hw.firstStr+" "+$hw.secondStr;
@@ -14,10 +14,10 @@ end;
 
 rule "second world"
 when 
-    $hw: HelloWorldObject(firstStr=="Hello")
+    $hw: HelloWorldObject(firstStr=="Hello") 
 then
     modify($hw){ 
-        secondStr="World"
+        secondStr="World";
     };
 end;
 
