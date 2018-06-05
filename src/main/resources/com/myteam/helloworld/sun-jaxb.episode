@@ -8,9 +8,15 @@ Any modifications to this file will be lost upon recompilation of the source sch
 Generated on: 2018.06.05 at 01:37:40 PM MSK 
 
   -->
+
   <bindings xmlns:tns="http://www.myteam.com/helloworld" if-exists="true" scd="x-schema::tns">
     <schemaBindings map="false">
       <package name="com.myteam.helloworld"/>
     </schemaBindings>
+    <bindings if-exists="true" scd="~tns:HelloWorldObject">
+      <class ref="com.myteam.helloworld.HelloWorldObject"/>
+    </bindings>
   </bindings>
+  
+  
 </bindings>
