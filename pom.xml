@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.myteam</groupId>
   <artifactId>HelloWorld</artifactId>
-  <version>1.0.SNAPSHOT</version>
+  <version>1.0.2</version>
   <name>Hello World</name>
   <description>DEMO проект для демонстрации основных моментов работы с drools &amp; KIE WB</description>
   <url></url>
