@@ -18,8 +18,6 @@ curl -X POST \
   http://<ИМЯ_СЕРВЕРА>:<ПОРТ>/kie-server/services/rest/server/containers/instances/HelloWorld_1.0.2 \
   -H 'Authorization: Basic ************************' \
   -H 'Content-Type: application/json' \
-  -H 'Postman-Token: 69ddd8d7-ae08-477d-a73f-a3ac4d83b4bf' \
-  -H 'cache-control: no-cache' \
   -d '{
     "lookup": "HW SESS STATELESS",
     "commands": [
